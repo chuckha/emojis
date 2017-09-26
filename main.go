@@ -10,9 +10,8 @@ import (
 func main() {
 	emoji := strings.Split(emojiString, " | ")
 	rand.Seed(time.Now().Unix())
-	for i := 0; i < 3; i++ {
-		fmt.Printf("%v ", emoji[rand.Intn(len(emoji))])
-	}
+	out := []string{emoji[rand.Intn(len(emoji))], emoji[rand.Intn(len(emoji))], emoji[rand.Intn(len(emoji))]}
+	fmt.Println(strings.Join(out, " "))
 }
 
 const emojiString = `:bowtie: | :smile: | :laughing: | :blush: | :smiley: | :relaxed: | :smirk: | :heart_eyes: | :kissing_heart: | :kissing_face: | :flushed: | :relieved: | :satisfied: | :grin: | :wink: | :wink2: | :tongue: | :unamused: | :sweat_smile: | :sweat:
